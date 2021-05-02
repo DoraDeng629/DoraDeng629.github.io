@@ -272,21 +272,21 @@
                             <p>
                                 There are bots, or automated accounts, everywhere. This project focuses on Twitter bots. Some of these bots can be fun as they share interesting tweets to users every day. But all too often, a high-volume social media fake accounts exist to deceive or spread disinformation. Those malicious bots indirectly hurt Twitter’s image and business revenue as they gradually deplete the users’ organic exposure to the platform. <br><br>
 			        Excited with the possibility of machine learning and text analytics, I formed a team of four and built a classification model to spot scam bots, spam bots and fake followers.    <br><br>
-			        <i>Available on <a href="https://github.com/bigforehead/">Github</a>.</i>
+			        <i>Available on <a href="https://github.com/DoraDeng629/">Github</a>.</i>
 				<br><br>
                                 <b>BIG PICTURE</b><br>
                                 Coming into this project, we did some research and decided to divide the process into two phases. Before the implementation, we used Python to scrape account metadata and tweets of Twitter bot IDs. During phase one, we applied supervised machine learning to train Decision Tree, Random Forest, and Logistic Regression with behavioral bot features. In phase two, we engineered new features from tweets using Natural Language Processing and trained the models again. The result was amazing! We built a Random Forest classifier with 91.68% of accuracy (for testing data).<br>
 				    
-				 <img src="img/bot_process.png" class="model-text" alt="Tweeter Projects">
+				 <img src="img/bot_process.png" class="model-text" alt="Homeless and Hate Crime Incident">
 				 
                                 <br><br>
                                 <b>APPROACH</b><br>
 				Here is our pipeline:<br><br>
-				 <img src="img/modelbaseline.png" class="model-text" alt="Tweeter Projects">
+				 <img src="img/modelbaseline.png" class="model-text" alt="Homeless and Hate Crime Incident">
 				<br><br>
                                 The raw dataset included 900 IDs for each kind of malicious bots from Bot Repository, total 2700 IDs. After scraping account metadata and tweets with Twitter API and Tweepy, we visualized number of tweets collected in the following graphic.
 				<br><br>
-				<img src="img/botgroupdistribution.png" class="model-text" alt="Tweeter Projects">
+				<img src="img/botgroupdistribution.png" class="model-text" alt="Homeless and Hate Crime Incident">
 				<br><br>
 				<b>PHASE ONE: SPOT A BAD BOT BY BEHAVIOR </b><br>
 				
@@ -300,21 +300,21 @@
 			        In short, fake followers have the lowest TFIDF score in all three dictionaries and a little better match in fake follower dictionary due to their small number of tweets. Scam bots have high TFIDF in all three dictionaries and especially in the spam dictionary. Spam bots do post tons of tweets, and the result indicates that there are some words in the spam dictionary that have discriminative power to distinct spam bots from other types. We added these three average TFIDF as our new features in our detection model and built a new model to see whether these three new features can contribute to our overall accuracy.<br><br>
 				    <b> Spam bot's Tweets WordCloud </b><br><br>
 
-				 <img src="img/type1.png" class="model-text" alt="Tweeter Projects">
+				 <img src="img/type1.png" class="model-text" alt="Homeless and Hate Crime Incident">
 				 <br><br>
 				    <b> Scam bot's Tweets WordCloud</b><br><br>
-				 <img src="img/type2.png" class="model-text" alt="Tweeter Projects">
+				 <img src="img/type2.png" class="model-text" alt="Homeless and Hate Crime Incident">
 				 <br><br>
 				    
 				The Random Forest Classification applied 12 inputs as predicting factors to train 1405 records again. The dataset was partitioned into 70% of the training set and 30% of the testing set. Adding three new inputs of average TFIDF scores of fake followers, scam bots, and spam bots, the model produced a new list of important indicators. The top three indicators were the average of retweet frequency, the number of followers, and average TFIDF score of the spam bot. According to the result, the TFIDF score plays a significant role in classifying types of malicious bots. This new model predicted malicious bots correctly of 91.68% on the testing set.<br><br>
-				  <img src="img/P2indicator.png" class="model-text" alt="Tweeter Projects">
+				  <img src="img/P2indicator.png" class="model-text" alt="Homeless and Hate Crime Incident">
 				    <br>
-				   <img src="img/P2indicator2.png" class="model-text" alt="Tweeter Projects">
+				   <img src="img/P2indicator2.png" class="model-text" alt="Homeless and Hate Crime Incident">
 				 <br><br>
 	
                                 <b>MODEL EVALUATION</b><br>
                                 The model in phase two performed slightly better than the model in phase one. Obviously, the TF-IDF features certainly contributed to the improvement of the model.<br><br>
-                                 <img src="img/tweetcompare12.png" class="model-text" alt="Tweeter Projects">
+                                 <img src="img/tweetcompare12.png" class="model-text" alt="Homeless and Hate Crime Incident">
 				<br><br>
 				    
                                 <b>WRAPPING UP</b><br>
