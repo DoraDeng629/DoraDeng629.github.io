@@ -284,28 +284,43 @@
                                 <br><br>
                                 <b>Hypothesis</b><br>
 				Here is our Hypothesis:<br><br>
-				 <img src="img/Homelesshypo.png" class="model-text" width="600px" height="480px" alt="Homeless and Hate Crime Incident">
-				<br><br>
+				 <img src="img/Homelesshypo.png" class="model-text" width="500px" height="580px" alt="Homeless and Hate Crime Incident">
+				<br>
                                 We set up three hypotheses, studied the number, location, and motivation of homelessness and crime, and determined 10 main variables, and then told the story from the visualization chart and reached the conclusion.
 				<br><br>
-				<b>PHASE ONE: Visualization results </b><br>
+				<b>PHASE ONE: Visualization Results </b><br>
 				
 				Below we mainly show the results of the Tableau visualization chart. <br>
 				<br>
-				     <b> Figure1</b><br><br>
+				     <b> Figure 1. U.S. Map of 12-Year Average Hate Crime Incidents and Homelessness (2007-2018) </b><br><br>
 				<br><br>
 				<img src="img/Homeless1.png" class="model-text" alt="Homeless and Hate Crime Incident">
 				
 				The chart shows the 12-year average number of hate crime incidents and homelessness on the U.S. map for each State. The chart insight is that the higher the number of homeless, the highest the number of hate crime incidents and hate crime victims. In the West and the Northeast are the hotspot of homelessness and hate crime incidents as well. The chart implies there is approximately positive correlation between number of homelessness and number of hate crime.<br>
 				<br>
-				    <b> Figure2</b><br><br>
+				    <b> Figure 2. Area Chart of Monthly Incidents Patterns by Location (2008-2012)</b><br><br>
 				<br><br>
 				<img src="img/Homeless2.png" class="model-text" alt="Homeless and Hate Crime Incident">
 				The chart shows the monthly accumulated number of hate crime incidents and offenders by incident location from 2008 to 2012, drilled down by region. The chart insight is to demonstrate the monthly trend of hate crime incidents in the top 5 incident locations with the highest number of crimes committed.  The chart implies that deserted area such as highway, street field and lake as well as resident home has the highest number of hate crime, especially during Summer. Northeast has the highest “unknown” incidents location.<br>
-				<br><br>    
-				 
-				<b>PHASE TWO: SPOT A BAD BOT BY BEHAVIOR AND TWEET SEMANTICS</b><br>
-				We used Natural Language Toolkits to get keyword dictionary and keyword frequency for 216,173 tweets. We calculated every term frequency for each group of malicious bots. With the 0.05% threshold for term frequency rate, terms larger than the threshold were selected to create detection dictionaries for fake followers, scam bots, and spam bots. We used Python and Excel to calculate they keywords' TFIDF in each tweet using three dictionaries. Then we normalized TFIDF of each tweet to make sure they had the same weight and calculated the average normalized TFIDF for each account. We visualized the term frequency with WordClouds to make sure that the results were consistent with the TFIDF calculation.<br><br>
+				<br>
+				    <b> Figure 3. Sankey Chart of The Victim Flow From Bias Motivation to Offender Profile </b><br><br>
+				<br><br>
+				<img src="img/Homeless3.png" class="model-text" alt="Homeless and Hate Crime Incident">
+				The chart shows the percentage of victims by bias motivation and offender races and the flow of victims from bias motivation to offender races. The chart insight is the connection of bias motivation and offender races in order to identify  the kinds of offenders that committed certain crime. The chart implies that the number of racism victims is the highest in the U.S. and white offenders, taking up to 41% of other offender races, plays a major part in hurting these people. Also, the racism victims are mostly attacked by white offenders or unknown offenders.  <br>
+				<br>
+				    <b> Figure 4. Butterfly Chart of Top 10 Types of Hate Crime in the U.S. </b><br><br>
+				<br><br>
+				<img src="img/Homeless4.png" class="model-text" alt="Homeless and Hate Crime Incident">
+				The chart shows the number of victim and offender in comparison regarding the top 10 hate-crime types in the U.S. The chart aims to specify the type of hate crime with the highest number of victims and the relationship between victim and offender.The chart implies that Anti-Black or African American is the top problem of hate crime with the highest number of victims and offenders. Mostly, number of offenders are equals to number of victims. However, Anti-Jewish hate crime offenders is approximately one third of number of victims.<br>
+			        <br>
+				    <b> Figure 5. Donut Chart of Offense Types in the U.S. (2007-2008) </b><br><br>
+				<br><br>
+				<img src="img/Homeless5.png" class="model-text" alt="Homeless and Hate Crime Incident">
+				The chart shows the accumulated hate crime victims of 76,696 and the percentage of offense type as part of a whole. The chart aims to identify the distribution of top 10 offense types with the highest number of victims in the U.S. The chart implies that destruction/vandalism of property, intimidation, simple assault and aggravated assault are causing the most concern in the U.S., especially Destruction of Property. There are 30.35% of victims are attack by destruction of property. <br>
+			        <br>
+				
+				<b>PHASE TWO: Statistical Model </b><br>
+				We use statistical models such as regression model and random forest to verify hypotheses.<br><br>
 				<br>
 			        In short, fake followers have the lowest TFIDF score in all three dictionaries and a little better match in fake follower dictionary due to their small number of tweets. Scam bots have high TFIDF in all three dictionaries and especially in the spam dictionary. Spam bots do post tons of tweets, and the result indicates that there are some words in the spam dictionary that have discriminative power to distinct spam bots from other types. We added these three average TFIDF as our new features in our detection model and built a new model to see whether these three new features can contribute to our overall accuracy.<br><br>
 				    <b> Spam bot's Tweets WordCloud </b><br><br>
