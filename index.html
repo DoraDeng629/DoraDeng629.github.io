@@ -364,7 +364,7 @@
     </div>
 				    
 
-    <!--------Song Projects--->
+    <!--------RNAdata Projects--->
     <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-content">
             <div class="close-modal" data-dismiss="modal">
@@ -377,38 +377,49 @@
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2">
                         <div class="modal-body">
-                          <h2>A Song Recommender System on Million Song Dataset</h2>
+                          <h2>RNA sequence data and differential expression analysis in asthma treatment</h2>
                           <hr class="star-primary">
                           <div class="modal-text">
                             <p>
                        		
                              
-				 Recommendation Systems are very standard and popular all over the web. Companies like Netflix, Spotify, Apple, Pandora, and LinkedIn leverage the recommender systems to help users find new items quickly, creating a delightsome user experience while driving incremental revenue.
+				 Asthma is a chronic inflammatory airway disease. The most common medications used for its treatment are β2-agonists and glucocorticosteroids, and one of the primary tissues that these drugs target in the treatment of asthma is the airway smooth muscle. RNA-Seq is used to characterize the human airway smooth muscle (HASM) transcriptome at baseline and under three asthma treatment conditions.
+				 Methods: The Illumina TruSeq assay was used to prepare 75bp paired-end libraries for HASM cells from four white male donors under four treatment conditions: 1) no treatment; 2) treatment with a β2-agonist (i.e. Albuterol, 1μM for 18h); 3) treatment with a glucocorticosteroid (i.e. Dexamethasone (Dex), 1μM for 18h); 4) simultaneous treatment with a β2-agonist and glucocorticoid, and the libraries were sequenced with an Illumina Hi-Seq 2000 instrument. The Tuxedo Suite Tools were used to align reads to the hg19 reference genome, assemble transcripts, and perform differential expression analysis
 				<br><br>   
-				  <i>Available on <a href="https://github.com/bigforehead/Big-Data-Million-Song-Music-Recommendation-System">Github</a>.</i><br><br>
+				  <i>Available on <a href="https://github.com/DoraDeng629/R-studio_RNA-seq-and-gene-expression-data-analysis-in-asthma-treatment">Github</a>.</i><br><br>
                             
                                 <b>BIG PICTURE</b><br>
                       
-                                Discover Playlist is one of the most popular Spotify’s features, and it is generated each week based on user’s listening habits. Inspired by this playlist, I and three other classmates geeked out about recommendation algorithms and decided to create three music recommendation systems for our Big Data capstone project.<br><br>
-				We employed three algorithms (popularity benchmark, ALS, lyric-based and artist-based similarity filtering) to generated three different playlists: Hot Song playlist, Personalized playlist, and New User playlist. ALS algorithm was used for a personalized recommendation. The lyric-based and artist-based similarity algorithm was used to solve the cold-start problem with new users.<br><br>
-				The whole system was built with Python and PySpark on Google Cloud Platform and AWS. 
+                                This data shows that RNA-Seq is used to characterize the human airway smooth muscle (HASM) transcriptome at baseline and under four asthma treatment conditions.<br><br>
+				This study tested whether the RNA sequence of asthma patients is related to the action of Dexamethasone. <br><br>
+				Use R studio and biological package for differential expression analysis and biological gene comparison.
                                 <br><br>
 				<b>ABOUT THE DATA</b><br>
-				The Million Song Dataset, a collaborative project between The Echo Nest and LabROSA, is a freely available collection of audio features and meta data for a million contemporary popular music tracks.<br><br>
+				Number:8x38694=309552, Tool: R studio, we set treated with dexamethasone versus which samples are untreated controls. <br><br>
+				<img src="img/RNAdata.png" width="100%" height="auto" class="model-text" alt="RNAdata">
 				
 				The links are available here: <br>
-				<a href="http://millionsongdataset.com/tasteprofile/">Taste Profile</a>, <a href="http://millionsongdataset.com/musixmatch/">The musiXmatch dataset</a>, <a href="http://millionsongdataset.com/pages/getting-dataset/#subset ">The Million Song subset</a>
+				<a href="https://www.kaggle.com/usharengaraju/indian-women-in-defense/">airway_metadata</a>
+				
 				
 				<br><br>
                                 <b>APPROACH</b><br>
-				    <img src="img/song_baselinemodel.png" class="model-text" alt="Song Projects">
+				    <img src="img/RNA2.png" width="100%" height="auto" class="model-text" alt="RNAdata">
 				
                                 <br><br>
-				<b>ALGORITHM DEVELOPMENT</b><br>
-				<b>1. Popularity Benchmark</b><br>
-				Popularity is the benchmark for recommending songs because it is better than random guesses. The data were filtered by total frequency based on listening history, then top 10 heated tracks were selected. This would be the baseline saver in case there is no data for a new user (cold-start problem).
+				<b>Results</b><br>
+				<b>1. Visualization results</b><br>
+				     <img src="img/RNA3.png" width="100%" height="auto" class="model-text" alt="RNAdata">
+				     <img src="img/RNA4.png" width="100%" height="auto" class="model-text" alt="RNAdata">
+				Extract a single gene, perform matrix, and compare all genes, we can see that pvalue is much greater than 0.05. DESeq2 package for differential expression analysis of the airway data set to find differentially expressed genes between untreated and treated samples.<br>
+				     <img src="img/RNA5.png" width="100%" height="auto" class="model-text" alt="RNAdata">
+				     <img src="img/RNA6.png" width="100%" height="auto" class="model-text" alt="RNAdata">
+				We use the results() function to generate a results table with log2 fold changes, p values and adjusted p values for each gene. In DESeq2, the function plotMA generates an MA Plot commonly used to visualize the differential expression results. The plot shows the log2 fold changes attributable to a given variable over the mean of normalized counts for all the samples in the DESeqDataSe.<br>
+				Volcano plot tells us whether each gene is significant. Using the mutate() function from library dplyr, we can add a column showing whether the significance is TRUE or FALSE. 
+
+	
 				<br><br>
-				<b>2. Collaborative Filtering</b><br>
+				<b>2. Evaluation </b><br>
 				Collaborative filtering is probably one of the most used approaches for the recommendation system, or at least as a necessary component of some advanced recommendation structures. Surprisingly, this algorithm requires such simple data, nothing more than the users’ historical preference on a set of items. The main assumption here is that the users (listeners in our case) who have agreed in the past are very likely to agree in the future. For multiple users, it assumes if user A liked the same product as user B, A would also like to have similar taste as B for other B’s favorites.<br><br>
 				In terms of the ratings, the algorithm often requires some metrics to indicate users’ preference, which can either be explicitly available data such as 5 stars or thumbs-up on the product, or an implicitly derived score such as clicks, number of purchases, or other data recorded in the cookie. In this project, traditional way was implemented by utilizing the listening frequency as the rating. The assumption when lacking explicit rating is that a higher listening frequency equates to a higher rating.<br><br>
 				For ALS, a matrix with frequency of each song played by each user was constructed. Certainly, this matrix is sparse with tons of missing value, as a limited number of users have listened to only a limited set of songs. The high-level idea is to approximate the matrix by factorizing it as the product of two matrices: the user matrix that represents each user, while the item matrix describes properties of each track.<br><br>   
