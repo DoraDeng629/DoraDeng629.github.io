@@ -278,13 +278,11 @@
                                 <b>BIG PICTURE</b><br>
                                 We use python to clean, merge two data sets including homelessness and hate crime with 140k+ disorder data for up to 12 years. Then, we determine the variables to make assumptions, create 20 Tableau charts according to hypothesis for visual analysis for analysis. Such as Homelessness, crime rate, victim, offender, location, researching the relationship between each other to make further predictions about the next hate crime. 
 				Finally, display correlation and Random forest model with SPSS to test hypothesis. <br>
-				    
-				 <img src="img/bot_process.png" class="model-text" alt="Homeless and Hate Crime Incident">
 				 
                                 <br><br>
                                 <b>Hypothesis</b><br>
 				Here is our Hypothesis:<br><br>
-				 <img src="img/Homelesshypo.png" class="model-text" width="700px" height="580px" alt="Homeless and Hate Crime Incident">
+				 <img src="img/Homelesshypo.png" class="model-text" width="720px" height="580px" alt="Homeless and Hate Crime Incident">
 				<br>
                                 We set up three hypotheses, studied the number, location, and motivation of homelessness and crime, and determined 10 main variables, and then told the story from the visualization chart and reached the conclusion.
 				<br><br>
@@ -294,68 +292,59 @@
 				<br>
 				     <b> Figure 1. U.S. Map of 12-Year Average Hate Crime Incidents and Homelessness (2007-2018) </b><br><br>
 				<br><br>
-				<img src="img/Homeless1.png" class="model-text" alt="Homeless and Hate Crime Incident">
+				<img src="img/Homeless1.png" class="model-text" width="520px" height="480px" alt="Homeless and Hate Crime Incident">
 				
 				The chart shows the 12-year average number of hate crime incidents and homelessness on the U.S. map for each State. The chart insight is that the higher the number of homeless, the highest the number of hate crime incidents and hate crime victims. In the West and the Northeast are the hotspot of homelessness and hate crime incidents as well. The chart implies there is approximately positive correlation between number of homelessness and number of hate crime.<br>
 				<br>
 				    <b> Figure 2. Area Chart of Monthly Incidents Patterns by Location (2008-2012)</b><br><br>
 				<br><br>
-				<img src="img/Homeless2.png" class="model-text" alt="Homeless and Hate Crime Incident">
+				<img src="img/Homeless2.png" class="model-text"  width="520px" height="480px" alt="Homeless and Hate Crime Incident">
 				The chart shows the monthly accumulated number of hate crime incidents and offenders by incident location from 2008 to 2012, drilled down by region. The chart insight is to demonstrate the monthly trend of hate crime incidents in the top 5 incident locations with the highest number of crimes committed.  The chart implies that deserted area such as highway, street field and lake as well as resident home has the highest number of hate crime, especially during Summer. Northeast has the highest “unknown” incidents location.<br>
 				<br>
 				    <b> Figure 3. Sankey Chart of The Victim Flow From Bias Motivation to Offender Profile </b><br><br>
 				<br><br>
-				<img src="img/Homeless3.png" class="model-text" alt="Homeless and Hate Crime Incident">
+				<img src="img/Homeless3.png" class="model-text" width="520px" height="480px" alt="Homeless and Hate Crime Incident">
 				The chart shows the percentage of victims by bias motivation and offender races and the flow of victims from bias motivation to offender races. The chart insight is the connection of bias motivation and offender races in order to identify  the kinds of offenders that committed certain crime. The chart implies that the number of racism victims is the highest in the U.S. and white offenders, taking up to 41% of other offender races, plays a major part in hurting these people. Also, the racism victims are mostly attacked by white offenders or unknown offenders.  <br>
 				<br>
 				    <b> Figure 4. Butterfly Chart of Top 10 Types of Hate Crime in the U.S. </b><br><br>
 				<br><br>
-				<img src="img/Homeless4.png" class="model-text" alt="Homeless and Hate Crime Incident">
+				<img src="img/Homeless4.png" class="model-text"  width="520px" height="480px" alt="Homeless and Hate Crime Incident">
 				The chart shows the number of victim and offender in comparison regarding the top 10 hate-crime types in the U.S. The chart aims to specify the type of hate crime with the highest number of victims and the relationship between victim and offender.The chart implies that Anti-Black or African American is the top problem of hate crime with the highest number of victims and offenders. Mostly, number of offenders are equals to number of victims. However, Anti-Jewish hate crime offenders is approximately one third of number of victims.<br>
 			        <br>
 				    <b> Figure 5. Donut Chart of Offense Types in the U.S. (2007-2008) </b><br><br>
 				<br><br>
-				<img src="img/Homeless5.png" class="model-text" alt="Homeless and Hate Crime Incident">
+				<img src="img/Homeless5.png" class="model-text"  width="520px" height="480px" alt="Homeless and Hate Crime Incident">
 				The chart shows the accumulated hate crime victims of 76,696 and the percentage of offense type as part of a whole. The chart aims to identify the distribution of top 10 offense types with the highest number of victims in the U.S. The chart implies that destruction/vandalism of property, intimidation, simple assault and aggravated assault are causing the most concern in the U.S., especially Destruction of Property. There are 30.35% of victims are attack by destruction of property. <br>
 			        <br>
 				
 				<b>PHASE TWO: Statistical Model </b><br>
-				We use statistical models such as regression model and random forest to verify hypotheses.<br><br>
+				We use statistical models such as regression model and random forest to verify hypotheses in Tableau and SPSS.<br><br>
 				<br>
-			        In short, fake followers have the lowest TFIDF score in all three dictionaries and a little better match in fake follower dictionary due to their small number of tweets. Scam bots have high TFIDF in all three dictionaries and especially in the spam dictionary. Spam bots do post tons of tweets, and the result indicates that there are some words in the spam dictionary that have discriminative power to distinct spam bots from other types. We added these three average TFIDF as our new features in our detection model and built a new model to see whether these three new features can contribute to our overall accuracy.<br><br>
-				    <b> Spam bot's Tweets WordCloud </b><br><br>
+				    <b> Scatterplot of Statistical Model and Regression Model (Logarithm) </b><br><br>
 
-				 <img src="img/type1.png" class="model-text" alt="Homeless and Hate Crime Incident">
+				 <img src="img/S1.png" class="model-text" alt="Homeless and Hate Crime Incident">
+				 <img src="img/S2.png" class="model-text" alt="Homeless and Hate Crime Incident">
+				 The chart showed the trend line between number of homeless individuals and the number of total individual victims in logarithm form. The chart insight was to test the hypothesis if there was a correlation between homeless and hate crime incidents. P-value < 0.0001, which means that the slopes were significant. The chart implied that there was a positive correlation between individual victims and homeless individuals. <br>
 				 <br><br>
-				    <b> Scam bot's Tweets WordCloud</b><br><br>
-				 <img src="img/type2.png" class="model-text" alt="Homeless and Hate Crime Incident">
-				 <br><br>
-				    
-				The Random Forest Classification applied 12 inputs as predicting factors to train 1405 records again. The dataset was partitioned into 70% of the training set and 30% of the testing set. Adding three new inputs of average TFIDF scores of fake followers, scam bots, and spam bots, the model produced a new list of important indicators. The top three indicators were the average of retweet frequency, the number of followers, and average TFIDF score of the spam bot. According to the result, the TFIDF score plays a significant role in classifying types of malicious bots. This new model predicted malicious bots correctly of 91.68% on the testing set.<br><br>
-				  <img src="img/P2indicator.png" class="model-text" alt="Homeless and Hate Crime Incident">
-				    <br>
-				   <img src="img/P2indicator2.png" class="model-text" alt="Homeless and Hate Crime Incident">
+				    <b> Statistical model of Random Forest </b><br><br>
+				 <img src="img/S3.png" class="model-text" alt="Homeless and Hate Crime Incident">
+				 <img src="img/S4.png" class="model-text" alt="Homeless and Hate Crime Incident">
+				 The chart showed the summary of importance predictor about if an individual would have to suffer from a single bias or multiple bias type of hate-crime. The chart insight was to understand which factor can predict if the hate crime incident was single or multiple bias. The most important factor was Total offender and second was incident location. The chart implied that the top incident location was at high-way or bus terminal, which was very deserted places with less people. On the other hand, school at elementary and secondary can be another place for hate crime incidents to happen. <br>
 				 <br><br>
 	
-                                <b>MODEL EVALUATION</b><br>
-                                The model in phase two performed slightly better than the model in phase one. Obviously, the TF-IDF features certainly contributed to the improvement of the model.<br><br>
-                                 <img src="img/tweetcompare12.png" class="model-text" alt="Homeless and Hate Crime Incident">
+                                <b>Conclusion</b><br>
+                                Number of homeless and hate crime are positively correlated according to states. Highways and Home/Residence are the major places where these hate crimes take place and see increase of incidence during summer in all the regions. Majority of victims face race-based crimes. And mostly offenders are white and of unknown race. Anti Black  or African Americans are the major type of crime with the highest number offenders  whereas Anti  Jewish victims are three times more than the offenders.Destruction of property  and intimidation are the  major offences committed which amounts to more than 50% of all  the hate crime offences committed in the country.<br><br>
 				<br><br>
 				    
-                                <b>WRAPPING UP</b><br>
-                                You made it here !!! To snapshot the process, we combined supervised machine learning and natural languague processing to detect malicious bots on Twitter.<br><br>
-				Overall, fake followers are inactive accounts with the highest TFIDF score for fake accounts. Scam bots are also inactive accounts but they retweet frequently and have the highest TFIDF score. Spam bots are active accounts with the highest TFIDF score. <br><br> 
+                                <b>Implications & Recommendation</b><br>
+                                Understand the relationship between homelessness and hate crime. Investigate the relationship of hate crime victimization, such as location, time, motivation bias and offender profile to help government  predict the next possible incidents. <br><br>
+				77,941 reported cases about hate-crime provided by the FBI & Homelessness data of 49 States of the United States (Nebraska is excluded) provided by US Department of Housing and Urban Development. Limited on homelessness data which is only on the State level and Year level. The reason for unknown offences and why they have not been reported and reasons behind the same.<br><br> 
 			        Thanks for reading! <br><br>
                              
-	
-				 <b> SPOT A BOT THROUGH VISUALIZATION </b><br>
-				If you want to understand how different bots behave on Twitter, check this Viz out! <br><br>
-				 <div class='tableauPlaceholder' id='viz1585549357967' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Tw&#47;TwitterMaliciousBotDetection&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='TwitterMaliciousBotDetection&#47;Dashboard1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Tw&#47;TwitterMaliciousBotDetection&#47;Dashboard1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1585549357967');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='1024px';vizElement.style.height='795px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='1024px';vizElement.style.height='795px';} else { vizElement.style.width='100%';vizElement.style.height='1477px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
                                 <b>REFERENCES</b><br>
-                                [1] Stefano Cresci et al. The paradigm-shift of social spambots. arXiv:1701.03017v1 [cs.SI] 11 Jan 2017. Available at: https://arxiv.org/abs/1701.03017<br>
-				[2] Cresci-2017 and Pronbots-2019 : https://botometer.iuni.iu.edu/bot-repository/datasets.html. Accessed: 2019-11-26.<br>
-				[3] Lulwah Ahmad AlKulaib. Twitter Bots Multiclass Classification Using Bot-Like Behavior Features. B.S. in Computer Science, Gulf University for Science and Technology, June 2011.<br>
-				[4] Efthimion, Phillip George; Payne, Scott; and Proferes, Nicholas (2018) "Supervised Machine Learning Bot Detection Techniques to Identify Social Twitter Bots," SMU Data Science Review: Vol. 1: No. 2, Article 5. Available at: https://scholar.smu.edu/datasciencereview/vol1/iss2/5.
+                                [1] It can be implied that hate crimes are more prevalent in states with higher number of homelessness, so government need to be more careful in those areas, specifically in West and Northeast Region.<br>
+				[2] Hate crimes in school see a spike as soon as the school starts, therefore schools need a policy  framework which  can improve understanding between people from different races. For Example: Organizing cultural meetups before school starts.<br>
+				[3] As property destruction is more prominent in religious places. There should be better  security  measures incorporated during events to avoid these incidents.<br>
                                 <br><br>
                               
                               <iframe width="100%" height="500px" src="file/twitterbot.pdf#toolbar=0"></iframe><br><br>
