@@ -405,7 +405,7 @@
 				<br><br>
                                 <b>APPROACH</b><br>
 				    <img src="img/RNA2.png" width="100%" height="auto" class="model-text" alt="RNAdata">
-				    This research will work with the airway dataset. This data set comes from an RNA-Seq experiment, a high throughput sequencing method, on four human airway smooth muscle cell lines treated and untreated with dexamethasone. The data set has four control groups up to 38,695 rows. <br>
+				    This research will work with the airway dataset. This data set comes from an RNA-Seq experiment, a high throughput sequencing method, on four human airway smooth muscle cell lines treated and untreated with dexamethasone. The data set has four control groups up to 38,695 rows. <br><br>
 				    I have adopted 1) T test and Linear Regression, 2) Differential Expression Analysis and 3) enrichment analysis. In this case we choose variables cell and dex because we care about the cell line and which samples are treated with dexamethasone versus which samples are untreated controls. The basis for this type of analysis is common when analyzing high-throughput data. It has the following steps: Extract the expression values for a single gene. Run compare the mean expression between two groups using a statistical test. Repeat former steps for every gene. Then, from dplyr package to filter out results based on padj < 0.01. Gene set enrichment analysis (GSEA), is a method to identify classes of genes that are over-represented in a large set of genes. 
 
 				
