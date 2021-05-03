@@ -405,7 +405,8 @@
 				<br><br>
                                 <b>APPROACH</b><br>
 				    <img src="img/RNA2.png" width="100%" height="auto" class="model-text" alt="RNAdata">
-				    This research will work with the airway dataset. This data set comes from an RNA-Seq experiment, a high throughput sequencing method, on four human airway smooth muscle cell lines treated and untreated with dexamethasone. The data set has four control groups up to 38,695 rows. I have adopted 1) T test and Linear Regression, 2) Differential Expression Analysis and 3) enrichment analysis. In this case we choose variables cell and dex because we care about the cell line and which samples are treated with dexamethasone versus which samples are untreated controls. The basis for this type of analysis is common when analyzing high-throughput data. It has the following steps: Extract the expression values for a single gene. Run compare the mean expression between two groups using a statistical test. Repeat former steps for every gene. Then, from dplyr package to filter out results based on padj < 0.01. Gene set enrichment analysis (GSEA), is a method to identify classes of genes that are over-represented in a large set of genes. 
+				    This research will work with the airway dataset. This data set comes from an RNA-Seq experiment, a high throughput sequencing method, on four human airway smooth muscle cell lines treated and untreated with dexamethasone. The data set has four control groups up to 38,695 rows. <br>
+				    I have adopted 1) T test and Linear Regression, 2) Differential Expression Analysis and 3) enrichment analysis. In this case we choose variables cell and dex because we care about the cell line and which samples are treated with dexamethasone versus which samples are untreated controls. The basis for this type of analysis is common when analyzing high-throughput data. It has the following steps: Extract the expression values for a single gene. Run compare the mean expression between two groups using a statistical test. Repeat former steps for every gene. Then, from dplyr package to filter out results based on padj < 0.01. Gene set enrichment analysis (GSEA), is a method to identify classes of genes that are over-represented in a large set of genes. 
 
 				
                                 <br><br>
@@ -415,11 +416,11 @@
 				     <img src="img/RNA4.png" width="100%" height="auto" class="model-text" alt="RNAdata">
 				First, I converted the data into a matrix and performed Ttest to see if the effect of medication in the treatment was significant. As shown in Figure 1, a single gene is extracted to establish a linear regression. Because it is a simple linear relationship, the linear regression here is also equivalent to the Ttest result. The t-test is a common choice for performing a differential analysis. Next we will perform a simple differential test comparing treated and control groups in our gene expression data. The "dex" column in `metadata` gives group values for treated and control samples . I created a new data.frame called `genedata` with two columns: 1) log-transformed expression values of "ENSG00000002549" and 2) group values from the "dex" variable. Call the columns "ex" and "group", respectively .<br>
 				<br>
-				Hypothesis H0: Dexamethasone is not related to gene expression, H1: Dexamethasone is related to gene expression. According to Figure 1 and Figure 2, the pvalue of this gene is as high as 0.9981. Although the variable is significant, the Pvalue in Ttest is much greater than 0.05, so accept the null hypothesis that dex has nothing to do with gene expression. After performing the T test on all genes, select the mean difference and Pvalue value for comparison.<br>
+				Hypothesis H0: Dexamethasone is not related to gene expression, H1: Dexamethasone is related to gene expression. According to Figure 1 and Figure 2, the pvalue of this gene is as high as 0.9981. Although the variable is significant, the Pvalue in Ttest is much greater than 0.05, so accept the null hypothesis that dex has nothing to do with gene expression. After performing the T test on all genes, select the mean difference and Pvalue value for comparison.<br><br>
 				    <img src="img/RNAttestall.png" width="100%" height="auto" class="model-text" alt="RNAdata">
 				Looking at all the Ttest results, most of the Pvalue are far greater than 0.05. Next we have to do Differential Expression Analysis using DESeq2.
 				<br><br>
-				<b>2. differential expression </b><br>   
+				<b>2. differential expression analysis </b><br>   
 				     <img src="img/RNA5.png" width="100%" height="auto" class="model-text" alt="RNAdata">
 				     <img src="img/RNA6.png" width="100%" height="auto" class="model-text" alt="RNAdata">
 				<br>
