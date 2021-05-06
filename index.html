@@ -488,9 +488,12 @@
 				   <img src="img/logloss.png" class="model-text" alt="MarchMadness"><br>
                                 <br><br>
 				<b>APPROACH</b><br>
-				 Coming into this competition, I did some research on similar projects and came up with a general idea of what to do. As far as I knew, some projects went with logistic regression as their primary algorithm because of the probabilistic nature and simple implementation, yet effective. With my prior knowledge, I took a similar approach to other models while making a few interesting changes with novel features. <br>
-				 <br>So, what is new about my approach? <br><br>
-				   <img src="img/mm_newfeatures.png" class="model-text" alt="MarchMadness"><br><br>
+				 Coming into this competition, I did some research on similar projects and came up with a general idea of what to do. I found Logistic regression is one of the most popular Machine learning algorithm that comes under Supervised Learning techniques. It can be used for Classification as well as for Regression problems, but mainly used for Classification problems. Logistic regression is used to predict the categorical dependent variable with the help of independent variables. The output of Logistic Regression problem can be only between the 0 and 1. Logistic regression can be used where the probabilities between two classes is required. Such as whether it will rain today or not, either 0 or 1, true or false etc. Logistic regression is based on the concept of Maximum Likelihood estimation. According to this estimation, the observed data should be most probable.
+				<br>
+				 Here I set the winning or losing to 1,0 to determine which independent variable is related to winning or losing.   
+				<br><br>
+				
+				   <img src="img/LR.png" class="model-text" alt="MarchMadness"><br><br>
 				 Instead of analyzing the stats of each team, I engineered new features by transforming all variables into Difference and Ratio, or Quotient, between two teams in each of 63 games.<br>
 				 <br>
 				 Then I calculated the Winning Rate and Teamwork Score for each team and coach. The level of teamwork can be reflected by the percentage of assist score (80%) and the defensive efficiency (20%). The team can be more stable if they rely on assist and better defense to win the game.<br> 
