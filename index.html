@@ -501,7 +501,9 @@
 				 Then we see which variable is the most significant<br> 
 				 <br>
 				 <img src="img/Figure1.png" width=500px" height="380px" class="model-text" alt="MarchMadness"><br><br>	
-				 To select the most important features, I removed highly correlated variables (Pearson correlation > 0.9) and applied Embedded method with Random Forests. Some advantages of Embedded methods are higher accuracy, better generalization, and being interpretable (based on importance). Also, it works well when dealing with high-dimensional dataset.<br>
+				 Figure 1 aggregate the total game a team played and how many times it wins. This chart shows that the more times a team participates in a match, the more it wins. 
+				 <br>
+				 Figure 2 shows that the team seed is a good indicator for the result of game. The team who has larger average team seed is more likely to have a better win rate. 							     
 				 <br>
 				 After hyperparameter tunning Random Forest Classifier with Grid Search, I trained Logistic Regression, Gradient Boosting, Support Vector Classifier, Random Forest Classifier, and Linear Discriminant Analysis (LDA) and selected the best one with lowest log loss.<br>   
 				<br><br>
